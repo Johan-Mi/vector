@@ -103,37 +103,42 @@ struct Vector2 {
 };
 
 template<class T>
-Vector2<T> operator+(Vector2<T> const &left, Vector2<T> const &right) noexcept {
+constexpr Vector2<T> operator+(
+		Vector2<T> const &left, Vector2<T> const &right) noexcept {
 	return {left.x + right.x, left.y + right.y};
 }
 
 template<class T>
-Vector2<T> operator-(Vector2<T> const &left, Vector2<T> const &right) noexcept {
+constexpr Vector2<T> operator-(
+		Vector2<T> const &left, Vector2<T> const &right) noexcept {
 	return {left.x - right.x, left.y - right.y};
 }
 
 template<class T>
-Vector2<T> operator*(Vector2<T> const &left, Vector2<T> const &right) noexcept {
+constexpr Vector2<T> operator*(
+		Vector2<T> const &left, Vector2<T> const &right) noexcept {
 	return {left.x * right.x, left.y * right.y};
 }
 
 template<class T>
-Vector2<T> operator/(Vector2<T> const &left, Vector2<T> const &right) {
+constexpr Vector2<T> operator/(
+		Vector2<T> const &left, Vector2<T> const &right) {
 	return {left.x / right.x, left.y / right.y};
 }
 
 template<class T>
-Vector2<T> operator%(Vector2<T> const &left, Vector2<T> const &right) noexcept {
+constexpr Vector2<T> operator%(
+		Vector2<T> const &left, Vector2<T> const &right) noexcept {
 	return {left.x % right.x, left.y % right.y};
 }
 
 template<class T>
-Vector2<T> operator*(Vector2<T> const &vec, T const scalar) noexcept {
+constexpr Vector2<T> operator*(Vector2<T> const &vec, T const scalar) noexcept {
 	return {vec.x * scalar, vec.y * scalar};
 }
 
 template<class T>
-Vector2<T> operator/(Vector2<T> const &vec, T const scalar) {
+constexpr Vector2<T> operator/(Vector2<T> const &vec, T const scalar) {
 	return {vec.x / scalar, vec.y / scalar};
 }
 
